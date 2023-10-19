@@ -1,9 +1,8 @@
 *{
    margin: 0;
    padding: 0;
- /*  font-family: Verdana, Geneva, Tahoma, sans-serif; */
- /*  font-family: 'Young Serif', serif;  */
-   font-family: 'Roboto', sans-serif;
+   font-family: 'Roboto', sans-serif;  /*Fuentes de Google Fpnts*/
+
 }
 
                                                       /* HEADER */
@@ -53,6 +52,8 @@ transition: 0.5s;
 
 
                                                       /* MAIN */
+
+                                 /* MAIN - BANNER */                                                         
 #banner{
     padding: 0 50px;
     background-image: url(FondoMain.png);
@@ -108,6 +109,8 @@ transition: 0.5s;
     display: flex;    
     flex-wrap: wrap; 
     text-align: center;
+    background-color: rgb(226, 252, 233);
+    flex: 4;
 }
 
 #nosotros img{
@@ -115,7 +118,7 @@ transition: 0.5s;
 }
 
 #nosotros div{
-    padding: 30px 30px;
+    padding: 30px 80px;
 }
 
 #nosotros div h4{
@@ -132,9 +135,9 @@ transition: 0.5s;
  .Ver-perfil{
     display: inline-block;
     text-decoration: none;
-    color: green;
+    color: black;
     padding: 10px 30px;
-    border: 2px solid greenyellow;
+    border: 2px solid green;
     border-radius: 30pc;
     margin-top: 15px;
     transition: all 0.5s;
@@ -142,16 +145,25 @@ transition: 0.5s;
 
  .Ver-perfil:hover{
     background: greenyellow;
-    color: white;
+    color: rgb(78, 5, 5);
+ }
+
+                                  /* MAIN - ICONOS */   
+
+#iconos{
+     background-color: beige;
  }
 
  #iconos h4{
     padding: 40px;
+    font-weight: bolder;
+    font-size: 20px;  
     text-align: center;
  }
 .contenido-iconos{
     display: flex; 
     justify-content: space-around; 
+    padding: 50px;
 }
 
 .contenido-iconos a{
@@ -172,14 +184,33 @@ transition: 0.5s;
     transform: scale(1.5);
 } 
 
- .Nuestras_Clases{
-    padding: 150px 50px;
+                                                      /* FOOTER */
+
+.Nuestras_Clases{
+    padding: 80px 50px;
     text-align: center;
  }
 
-                                                      /* PARTE RESPONSIVE */        
-                                                      
+ .Nuestras_Clases iframe{
+    padding: 30px 30px;
+    text-align: center;
+    width: 40%;
+    height: 40vh;
+ }
 
+
+ .pie_contacto{
+    padding: 10 20px;
+    background-image: url(ModoPago.jpg);
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    background-color: transparent; 
+ } 
+
+
+                                                      /* RESPONSIVE */        
+                                                      
 @media(max-width: 768px){
     .mostrar,
     .esconder{
@@ -189,7 +220,7 @@ transition: 0.5s;
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: brown;
+        background: grey;
         right: -100%;
         top: 0;
         text-align: center;
@@ -218,8 +249,7 @@ transition: 0.5s;
         padding: 50px 50px;
         min-width: 700px;
         flex-direction: column;
-        text-align: center;
- 
+        text-align: center; 
 
 
                               /* NOSOTROS */

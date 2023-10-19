@@ -247,7 +247,11 @@
     width: 100vw;
     height:  100vh;
  }
- 
+ .Descripcion{
+    text-wrap: wrap;
+
+    text-size-adjust:10rem;
+ }
  
                                                        /* RESPONSIVE */        
                                                       

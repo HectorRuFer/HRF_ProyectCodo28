@@ -342,3 +342,24 @@
  
  
      }
+h1{
+    padding: 30px;
+}
+    section{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+        
+     }
+     .datos{
+        display: flex;
+     }
+
+     .datos img{
+        width: 100%;
+     }
+
+     article{
+        padding: 5px;
+        box-shadow: 0 0 1px #111;
+     }

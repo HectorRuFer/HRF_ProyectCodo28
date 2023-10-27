@@ -206,6 +206,8 @@
  .contenido-iconos a:hover{
      transform: scale(1.5);
  }
+
+
  
  
                                                        /* FOOTER */
@@ -298,7 +300,8 @@
          transition: 0.8s;
      }
  
- 
+     
+    
      .menu a{
          display: block;
          padding: 20px;
@@ -345,18 +348,45 @@
 h1{
     padding: 30px;
 }
-    section{
+    .section_api{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 16px;
+        gap: 1px;
         
+        
+        
+                                        
      }
+     .section_api img{
+        
+        border-color: rgba(0, 0, 0, 0.938);
+        border-width: 4px;
+        border-style: ridge;
+        
+    }
+     /* VER SI COLOCAR ESTO */
+     .datos:active{
+
+        
+        transform: scale(1.2);
+        
+    }
+
+     .section_api img:hover{
+        transform: scale(1.08);
+        border-color: rgba(227, 8, 8, 0.926);
+        transition-duration: 0.8s;
+        
+    }
      .datos{
         display: flex;
      }
 
      .datos img{
         width: 100%;
+        align-items: center;
+        justify-content: center;
+        
      }
 
      article{

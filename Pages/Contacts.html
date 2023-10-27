@@ -1,44 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/ v5.8.2/css/all.css" integrity="sha384-053vJWv+UjzBfQzYUhtDYW+Pj2yciDJxpsK10YPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/ v5.8.2/css/all.css"
+        integrity="sha384-053vJWv+UjzBfQzYUhtDYW+Pj2yciDJxpsK10YPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/9fb41bb252.js" crossorigin="anonymous"></script>
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-   
+
     <link rel="stylesheet" href="../assets/CSS/styles.css">
     <link rel="icon" href="../assets/IMG/logo.png">
 
     <title>Contacto</title>
+
+    <script src="../js/validacion.js"></script>
+
 </head>
+
 <body>
 
 
     <header>
-    <h2 class="logo">Contacto</h2>
-    <input type="checkbox" id="check" hidden="true">
-    <label for="check" class="mostrar">
-        &#8801
-    </label>
-    <nav class="menu">
-        <a href="../index.html">Inicio </a>
-        <a href="./Productos.html">Productos </a>
-        <a href="./Servicios.html">Servicios </a>
-        <label for="check" class="esconder">
-         &#215
+        <h2 class="logo">Contacto</h2>
+        <input type="checkbox" id="check" hidden="true">
+        <label for="check" class="mostrar">
+            &#8801
         </label>
-    </nav>
+        <nav class="menu">
+            <a href="../index.html">Inicio </a>
+            <a href="./Productos.html">Productos </a>
+            <a href="./Servicios.html">Servicios </a>
+            <label for="check" class="esconder">
+                &#215
+            </label>
+        </nav>
     </header>
 
-
+ 
+    <!-- Creo un formulario de contacto con campos para el nombre, correo electrónico y comentarios, junto con un botón para enviar los datos.
+    Muestro mensajes de error si los campos requeridos no se completan y mensaje de confirmación después del envío del formulario.  -->
     <main>
+        <!-- Uso el servicio de Formsubmit para enviar por email el formulardio completo
+            Encripto el destinatario del mail por razones de seguridad -->        
+        <form id="miFormulario" onsubmit="return validarFormulario()"
+            action="https://formsubmit.co/9cceac3b779b74dadc051ee218ad8e13" method="POST">
+            <div class="contenedor">
+                <!-- Título del formulario -->
+                <h1 style="font-family: sans-serif;font-size: 24px; font-weight: bold;">Formulario de contacto</h1>
+
+                <!-- Campo Nombre -->
+                <div class="campo">
+                    <label for="nombre" class="etiquetaFcontacto">Nombre: <span class="required">*</span></label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <span class="error-message" id="nombre-error"></span><br><br>
+                </div>
+
+                 <!-- Campo Correo Electrónico -->
+                <div class="campo">
+                    <label for="email" class="etiquetaFcontacto">Correo Electrónico: <span
+                            class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="email-error"></span><br><br>
+                </div>
+
+                 <!-- Campo Comentarios -->
+                <div class="campo">
+                    <label for="comentarios" class="etiquetaFcontacto">Comentarios: <span
+                            class="required">*</span></label>
+                    <textarea id="comentarios" name="comentarios" rows="4" required></textarea>
+                    <span class="error-message" id="comentarios-error"></span><br><br>
+                </div>
+
+                <!-- Botón de envío -->
+                <div class="botones">
+                    <button type="submit" value="Enviar">Enviar</button>
+                </div>
+                <p></p>
+                <p>
+                     <!-- Mensaje de confirmación de envío -->
+                    <span id="enviado-ok"></span><br><br>
+                </p>
+            </div>
+            <!--
+                Campos ocultos:
+                El servicio utiliza un "Captcha" y una pagina para volver a la pagina de origen. Oculto ambos.
+            -->
+            <!-- Puedo decomentar la siguiente linea, cuando este subida a algun sitio la pagina y sepa la pagina de retorno despues de enviar el formulario -->
+            <!-- <input type="hidden" name="_next" value="http://localhost:5500"> -->
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+
     </main>
 
 
@@ -51,21 +109,24 @@
                     <a class="fa fa-instagram" target="_blank" href="https://www.instagram.com/programacodoacodo/"></a>
                 </div>
                 <div>
-                    <a class="fa fa-facebook" target="_blank" href="https://www.facebook.com/AgenciaCTI.Jujuy/videos/codo-a-codo-40te-invitamos-a-inscribirte-en-los-cursos-que-te-entrenan-en-las-ar/325260899327363/"></a>
+                    <a class="fa fa-facebook" target="_blank"
+                        href="https://www.facebook.com/AgenciaCTI.Jujuy/videos/codo-a-codo-40te-invitamos-a-inscribirte-en-los-cursos-que-te-entrenan-en-las-ar/325260899327363/"></a>
                 </div>
                 <div>
-                    <a class="fa fa-twitter" target="_blank" href="https://twitter.com/disfrutemosba/status/1410976561809870855"></a>
+                    <a class="fa fa-twitter" target="_blank"
+                        href="https://twitter.com/disfrutemosba/status/1410976561809870855"></a>
                 </div>
                 <div>
-                    <a class="fa fa-youtube" target="_blank" href="https://www.youtube.com/channel/UCzelX_Pd_RkibwOMrYudIrQ"></a>
+                    <a class="fa fa-youtube" target="_blank"
+                        href="https://www.youtube.com/channel/UCzelX_Pd_RkibwOMrYudIrQ"></a>
                 </div>
             </div>
         </section>
-        
-        
+
+
     </footer>
 
 
 </body>
-</html>
 
+</html>

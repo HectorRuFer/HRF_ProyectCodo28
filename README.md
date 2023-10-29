@@ -1,10 +1,22 @@
-# HRF_ProyectCodo28
-Probando el nuevo repositorio
 
-La pagina llamada "Nosotros" es la utilizada para crear el diseño responsive pedido en el punto 5 del TP
+## Pagina principal
+
 La pagina cuanta con 3 secciones principales: Encabezado, cuerpo y pie. Dentro del cuerpo hay 3 seciones: Banner, Nosotros e Iconos).
+El encabezado tiene 3 hipervinculos (Principal, productos y servicios), que se esconden cuando se achica la ventana.
+Cuando desaparecen los hipervinculos aparece el icono ≡ (hamburguesa), que al hacerle click, aparece un menu desplegable con los 3 Hipervinculos escondidos.
 
-Se usaron iconos de fontawesome, se usaron fuentes de Google Fonts (para todo el docuntos)
+En la seccion llamada Banner hay una imagen de fondo y un ::before, usado para la estética de la pagina
+
+En la seccion llamada nosotros puse unos avatars con nuestros nombres, una descripcion simbólica y un boton (ver Perfil) que lleva a la pagina principal de linkedin.
+Cada boton tiene la animacion que cambia de color de fondo y de la letra cuando pasamos el mouse por encima.
+
+El sector iconos, usamos los iconos de fontawesome que corresponden a las redes sociales IG, FB TW y YT.
+cada una de los botones apunta a las redes sociales del programa codo a codo V4.0.
+Los iconos tiene la animacion que cambia de tamaño cunado le pasamos el mouse por encima.
+
+El footer esta hecho en CSS
+
+Para todo el HTML se usaron fuentes de google fonts.
 
 
 

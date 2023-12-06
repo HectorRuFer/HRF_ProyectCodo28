@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/ v5.8.2/css/all.css" integrity="sha384-053vJWv+UjzBfQzYUhtDYW+Pj2yciDJxpsK10YPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9fb41bb252.js" crossorigin="anonymous"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="../assets/CSS/styles.css">
+    <link rel="icon" href="../assets/IMG/logo.png">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!--Bootstrap 5 icons CDN-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="styles.css">
+
+    <title>Empleados</title>
+</head>
+<body>
+
+
+    <header>
+    <h2 class="logo">Empleados</h2>
+    <input type="checkbox" id="check" hidden="true">
+    <label for="check" class="mostrar">
+        &#8801
+    </label>
+    <nav class="menu">
+        <a href="../index.html">Inicio </a>
+        <a href="./Contacts.html">Contacto </a>
+        <a href="./Servicios.html">Servicios </a>
+        <label for="check" class="esconder">
+         &#215
+        </label>
+    </nav>
+    </header>
+
+
+    <main>
+
+        <section class="p-3">
+
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-primary newUser" data-bs-toggle="modal" data-bs-target="#userForm">Nuevo <i class="bi bi-people"></i></button>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-12">
+                    <table class="table table-striped table-hover mt-3 text-center table-bordered">
+    
+                        <thead>
+                            <tr>
+                                <th>Legajo</th>
+                                <th>Foto</th>
+                                <th>Nombre</th>
+                                <th>Edad</th>
+                                <th>Ciudad</th>
+                                <th>Email</th>
+                                <th>Telefono</th>
+                                <th>Puesto</th>
+                                <th>Fecha Inicio</th>
+                                <th>Accion</th>
+                            </tr>
+                        </thead>
+    
+                        <tbody id="data"></tbody>
+    
+                    </table>
+                </div>
+            </div>
+    
+        </section>
+    
+    
+        <!--Modal Form-->
+        <div class="modal fade" id="userForm">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+    
+                    <div class="modal-header">
+                        <h4 class="modal-title">Fill the Form</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+    
+                    <div class="modal-body">
+    
+                        <form action="#" id="myForm">
+    
+                            <div class="card imgholder">
+                                <label for="imgInput" class="upload">
+                                    <input type="file" name="" id="imgInput">
+                                    <i class="bi bi-plus-circle-dotted"></i>
+                                </label>
+                                <img src="../assets/IMG/Profile Icon.webp" alt="" width="200" height="200" class="img">
+                            </div>
+    
+                            <div class="inputField">
+                                <div>
+                                    <label for="name">Nombre:</label>
+                                    <input type="text" name="" id="name" required>
+                                </div>
+                                <div>
+                                    <label for="age">Edad:</label>
+                                    <input type="number" name="" id="age" required>
+                                </div>
+                                <div>
+                                    <label for="city">Ciudad:</label>
+                                    <input type="text" name="" id="city" required>
+                                </div>
+                                <div>
+                                    <label for="email">E-mail:</label>
+                                    <input type="email" name="" id="email" required>
+                                </div>
+                                <div>
+                                    <label for="phone">Telefono:</label>
+                                    <input type="text" name="" id="phone" minlength="11" maxlength="11" required>
+                                </div>
+                                <div>
+                                    <label for="post">Puesto:</label>
+                                    <input type="text" name="" id="post" required>
+                                </div>
+                                <div>
+                                    <label for="sDate">Fecha Inicio:</label>
+                                    <input type="date" name="" id="sDate" required>
+                                </div>
+                            </div>
+    
+                        </form>
+                    </div>
+    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" form="myForm" class="btn btn-primary submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!--Read Data Modal-->
+        <div class="modal fade" id="readData">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+    
+                    <div class="modal-header">
+                        <h4 class="modal-title">Perfil</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+    
+                    <div class="modal-body">
+    
+                        <form action="#" id="myForm">
+    
+                            <div class="card imgholder">
+                                <img src="../assets/IMG/Profile Icon.webp" alt="" width="200" height="200" class="showImg">
+                            </div>
+    
+                            <div class="inputField">
+                                <div>
+                                    <label for="name">Nombre:</label>
+                                    <input type="text" name="" id="showName" disabled>
+                                </div>
+                                <div>
+                                    <label for="age">Edad:</label>
+                                    <input type="number" name="" id="showAge" disabled>
+                                </div>
+                                <div>
+                                    <label for="city">Ciudad:</label>
+                                    <input type="text" name="" id="showCity" disabled>
+                                </div>
+                                <div>
+                                    <label for="email">E-mail:</label>
+                                    <input type="email" name="" id="showEmail" disabled>
+                                </div>
+                                <div>
+                                    <label for="phone">Telefono:</label>
+                                    <input type="text" name="" id="showPhone" minlength="11" maxlength="11" disabled>
+                                </div>
+                                <div>
+                                    <label for="post">Puesto:</label>
+                                    <input type="text" name="" id="showPost" disabled>
+                                </div>
+                                <div>
+                                    <label for="sDate">Fecha Inicio:</label>
+                                    <input type="date" name="" id="showsDate" disabled>
+                                </div>
+                            </div>
+    
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+        <script src="app.js"></script>       
+     </main>
+   
+
+
+    <footer>
+
+        <section id="iconos">
+            <h4> VEA NUESTRAS REDES SOCIALES</h4>
+            <br>
+            <h6>  </h6>
+            <div class="contenido-iconos">
+                <div>
+                    <a class="fa fa-instagram" target="_blank" href="https://www.instagram.com/programacodoacodo/"></a>
+                </div>
+                <div>
+                    <a class="fa fa-facebook" target="_blank" href="https://www.facebook.com/AgenciaCTI.Jujuy/videos/codo-a-codo-40te-invitamos-a-inscribirte-en-los-cursos-que-te-entrenan-en-las-ar/325260899327363/"></a>
+                </div>
+                <div>
+                    <a class="fa fa-twitter" target="_blank" href="https://twitter.com/disfrutemosba/status/1410976561809870855"></a>
+                </div>
+                <div>
+                    <a class="fa fa-youtube" target="_blank" href="https://www.youtube.com/channel/UCzelX_Pd_RkibwOMrYudIrQ"></a>
+                </div>
+            </div>
+        </section>
+        
+        
+    </footer>
+
+
+</body>
+</html>
+

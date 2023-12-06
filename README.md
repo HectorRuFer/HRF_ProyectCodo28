@@ -18,11 +18,16 @@ El footer esta hecho en CSS.
 
 Para todo el HTML se usaron fuentes de google fonts.
 
-## Página Productos
+## Página Empleados
 
-La página pretende presentar productos a la venta relacionados con insumos y accesorios informáticos. Se presentan imágenes de Rick y Morty como respresentación de imagenes de los productos. Esto es debido al hecho de que requeríamos consumir una API y aprovechamos que encontramos aquella utilizada. Podría constuirse una API con imágenes e información sobre productos específicos para informática y que cumpla la misma función que la API consumida.
+La página tiene por finalidad la carga de empleados al sistema
 
-Se aplicaron transiciones a las imagenes para fomentar la interacción con el usuario.
+Tiene un boton para cargar un nuevo empleado donde se despliega tipo tajeta de identificacion. 
+En el campo edad, se puede ir cambiando con las flechitas o se puede escribir directamente.
+En el campo fecha, se puede elegir desde un calendario
+Se puede cargar una foto del empleado
+
+Una vez cargado el nuevo empleado, aparece en el listado de empledos, donde se cuenta con 3 botones VER, CAMBIAR Y BORRAR
 
 El header y el footer es el mismo que el de la página principal y el resto del sitio web.
 
